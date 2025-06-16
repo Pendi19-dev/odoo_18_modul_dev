@@ -51,7 +51,9 @@ logs:
 # =========================
 # Fungsi upgrade_addon
 # =========================
-upgrade_addon = $(DOCKER) exec -it $(CONTAINER_ODOO) odoo -i $(1) -d $(WEB_DB_NAME) --without-demo=all --stop-after-init --log-level=info
+upgrade_addon = $(DOCKER) exec -it $(CONTAINER_ODOO) odoo -i $(1) -d $(WEB_DB_NAME) -w odoo --db_host=$(CONTAINER_DB) --without-demo=all --stop-after-init --log-level=info
+
+
 
 
 
