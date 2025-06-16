@@ -4,7 +4,7 @@ services:
     image: odoo:18.0
     env_file: .env
     ports:
-      - "8072:8069"
+      - "8072:8072"
     volumes:
       - ./etc/odoo:/etc/odoo
       - ./addons:/mnt/extra-addons
